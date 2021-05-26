@@ -1,0 +1,10 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = Jonah Lawrence
+	email = jonah@freshidea.com
+[core]
+	editor = code --new-window --wait
