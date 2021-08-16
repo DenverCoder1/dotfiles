@@ -8,3 +8,5 @@
 	email = jonah@freshidea.com
 [core]
 	editor = code --new-window --wait
+[init]
+	defaultBranch = main
