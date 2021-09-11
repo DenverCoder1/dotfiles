@@ -5,7 +5,12 @@
 	smudge = git-lfs smudge -- %f
 [user]
 	name = Jonah Lawrence
-	email = jonah@freshidea.com
+  	email = jonah@freshidea.com
+	signingkey = DE3AB442EB5180AA
+[gpg]
+  	program = /usr/bin/gpg
+[commit]
+  	gpgsign = true
 [core]
 	editor = code --new-window --wait
 [init]
