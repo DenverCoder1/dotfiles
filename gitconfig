@@ -6,7 +6,7 @@
 [user]
 	name = Jonah Lawrence
   	email = jonah@freshidea.com
-	signingkey = DE3AB442EB5180AA
+	signingkey = 613851A667DC08A3
 [gpg]
   	program = /usr/bin/gpg
 [commit]
