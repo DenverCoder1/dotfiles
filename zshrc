@@ -70,7 +70,10 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,5 +114,19 @@ export LC_ALL="en_US.UTF-8"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias py="python3"
+alias l='lsd -l'
+alias la='lsd -a'
+alias lla='lsd -la'
+alias lt='lsd --tree'
+alias s2l='git checkout staging && git pull origin staging && git checkout live && git pull origin live && git merge staging && git push origin live && git checkout staging'
+
+eval $(thefuck --alias)
 
 export PATH="${PATH}:${HOME}/.local/bin"
+
+# zsh-autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#50606a'
+
+# zsh-syntax-highlighting
+# note: this must be at the end of the file
+source /home/jonah/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
