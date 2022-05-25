@@ -4,8 +4,8 @@
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
+    ~/.gdbinit: gdbinit
     ~/.gitconfig: gitconfig
+    ~/.gtkrc-2.0: gtkrc-2.0
     ~/.zshrc: zshrc
     ~/.xinitrc: xinitrc
-
-
