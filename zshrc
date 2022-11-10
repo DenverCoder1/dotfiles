@@ -114,11 +114,15 @@ export LC_ALL="en_US.UTF-8"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias py="python3"
+
 alias l='lsd -l'
 alias la='lsd -a'
 alias lla='lsd -la'
 alias lt='lsd --tree'
+
 alias s2l='git checkout staging && git pull origin staging && git checkout live && git pull origin live && git merge staging && git push origin live && git checkout staging'
+
+alias yu='yay -Quq --aur | xargs -n 1 yay -S --noconfirm; echo "Packages not updated:"; yay -Quq || echo "None"'
 
 eval $(thefuck --alias)
 
