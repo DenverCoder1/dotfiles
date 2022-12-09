@@ -79,6 +79,7 @@ plugins=(
 )
 
 bindkey '^X' create_completion
+bindkey '^[OM' create_completion
 
 source $ZSH/oh-my-zsh.sh
 
