@@ -75,7 +75,10 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
     git
     zsh-autosuggestions
+    zsh_codex
 )
+
+bindkey '^X' create_completion
 
 source $ZSH/oh-my-zsh.sh
 
