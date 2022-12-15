@@ -78,7 +78,10 @@ plugins=(
     zsh_codex
 )
 
+# Ctrl + X
 bindkey '^X' create_completion
+
+# Shift + Enter
 bindkey '^[OM' create_completion
 
 source $ZSH/oh-my-zsh.sh
@@ -129,6 +132,8 @@ alias lt='lsd --tree'
 alias s2l='git checkout staging && git pull origin staging && git checkout live && git pull origin live && git merge staging && git push origin live && git checkout staging'
 
 alias yu='yay -Quq --aur ; yay -Quq --aur | xargs -n 1 yay -S --noconfirm ; echo "Packages not updated:" ; yay -Quq || echo "None"'
+
+alias ixio="curl -F 'f:1=<-' ix.io"
 
 eval $(thefuck --alias)
 
