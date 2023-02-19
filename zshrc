@@ -122,19 +122,31 @@ export LC_ALL="en_US.UTF-8"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Python alias
 alias py="python3"
 
+# lsd aliases
 alias l='lsd -l'
 alias la='lsd -a'
 alias lla='lsd -la'
 alias lt='lsd --tree'
 
+# Usage: `s2l` (Merge staging branch into live branch)
 alias s2l='git checkout staging && git pull origin staging && git checkout live && git pull origin live && git merge staging && git push origin live && git checkout staging'
 
+# Usage: `yu` (Update all AUR packages and continue even if one fails)
 alias yu='yay -Quq --aur ; yay -Quq --aur | xargs -n 1 yay -S --noconfirm ; echo "Packages not updated:" ; yay -Quq || echo "None"'
 
+# Usage: `echo "Hello World" | ixio` (pipe any command to ixio)
 alias ixio="curl -F 'f:1=<-' ix.io"
 
+# Usage: `echo "Hello World" | clip` (pipe any command to clip)
+alias clip="xclip -selection clipboard"
+
+# Usage: `define <word>` (define a word)
+alias define='__define(){ sdcv "$@" | grep -v "\-->" }; __define'
+
+# Usage: `fuck` (correct the previous command)
 eval $(thefuck --alias)
 
 export PATH="${PATH}:${HOME}/.local/bin"
