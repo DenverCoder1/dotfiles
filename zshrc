@@ -147,6 +147,23 @@ alias clip="xclip -selection clipboard"
 # Usage: `define <word>` (define a word)
 alias define='__define(){ sdcv "$@" | grep -v "\-->" }; __define'
 
+# Usage `killport 8555`
+alias killport='__killport(){
+    lsof -i:$@
+    if [ $? -ne 0 ]; then
+        echo "No process found on port $@"
+        return
+    fi
+    echo "Do you want to kill the process? (Y/n)"
+    read answer
+    if [ "$answer" = "n" ]; then
+        echo "Killing process aborted"
+    else
+        lsof -ti:$@ | xargs kill -9
+    fi
+}; __killport'
+alias kp="killport"
+
 # Usage: `fuck` (correct the previous command)
 eval $(thefuck --alias)
 
